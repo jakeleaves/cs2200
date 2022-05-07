@@ -1,0 +1,33 @@
+CS 2200 Spring 2021
+Project 4
+
+Name: Jake Eaves
+GT Username: jeaves6
+
+Problem 1C (FCFS Scheduler)
+----------
+Total Execution Time:
+CPU(1) = 68.0 s
+CPU(2) = 39.9 s
+CPU(4) = 37.0 s
+
+It's not a linear relationship. There's significant change of execution time when we raise the number of processors from 1 to 2. With only a slight change from 2 to 4. The CPU is more than what is needed, so it will be idle. Therefore the execution time does not decreases much with more CPU.
+
+Problem 2B (Round-Robin)
+----------
+Total Waiting Time:
+Timeslice(800) = 319.4
+Timeslice(600) = 300.1
+Timeslice(400) = 297.3
+Timeslice(200) = 285.0
+
+The longer time-slice length, the longer the waiting time. In the OS, we don't choose the shortest time-slice because there will be more context switch which can lead to page faults.
+
+Problem 3B (Preemptive Priority)
+----------
+To prevent starvation, the scheduler can increase the priority of processes with lower priority that have been waiting for a while so they are pushed to the front of the priority queue and therefore selected before others.
+
+Problem 4 (The Priority Inversion Problem)
+---------
+We can use priority inheritance to temporarily elevate the priority of the window manager so that it can run the high priority process P1. The medium priority tasks won't be able to intervene and won't lead to priority inversion.
+
